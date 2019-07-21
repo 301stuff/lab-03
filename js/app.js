@@ -51,13 +51,25 @@ Creature.makeOption = function() {
   }
 };
 
-
 // event listener for drop down menu
-$('select[name="choice"]').on('change', function() { 
+$('select').on('change', function() { 
   let $selection = $(this).val();
-   $('.animal').hide();
+   $('.creatureDiv').hide();
    $('.' + $selection).show();  
-
   })
 
 // add event listener to nav to only populate images from selected button
+$('#pageOneButton').on("click", function() {
+  $('.creatureDiv').remove();
+  $('option').remove();
+  Creature.SelectOptions = [];
+  Creature.allCreatures = [];
+  $(() => Creature.readJson('../data/page-1.json'));
+})
+$('#pageTwoButton').on("click", function() {
+  $('.creatureDiv').remove();
+  $('option').remove();
+  Creature.SelectOptions = [];
+  Creature.allCreatures = [];
+  $(() => Creature.readJson('../data/page-2.json'));
+})

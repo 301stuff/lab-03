@@ -1,5 +1,16 @@
 # lab-03
-Feature 1: Pagination
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+#Feature 1: Pagination
 Why are we implementing this feature?
 As a user, I want to have the ability to view additional images so that my view does not become cluttered.
 What are we going to implement?
@@ -10,7 +21,17 @@ Then the other set of images should be dynamically displayed
 How are we implementing it?
 Add navigation for the user to switch between two pages. Each page should render a unique set of images from one of the two provided JSON files.
 Reset the filters, then repopulate them using only keywords from the images currently being displayed.
-Feature 2: Templating
+
+Number and name of feature: Pagination
+
+Estimate of time needed to complete: 3hours
+
+Start time: 2
+
+Finish time: _____
+
+Actual time needed to complete: _____
+#Feature 2: Templating
 Why are we implementing this feature?
 As a user, I want all of the images to be displayed in a consistent manner, so that it is easy to scan the collection of images.
 What are we going to implement?
@@ -21,7 +42,18 @@ Then each image should be rendered according to a template
 How are we implementing it?
 Create the appropriate Handlebars template in your HTML with the same <h2>, <img>, and <p> elements as the jQuery template from the prior lab.
 Refactor the method that renders your images to use Handlebars instead of making a copy with jQuery.
-Feature 3: Styling with Flexbox
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+#Feature 3: Styling with Flexbox
 Why are we implementing this feature?
 As a user, I want a simple, clean looking UI so that my photo gallery clearly displays the images.
 What are we going to implement?
@@ -31,7 +63,18 @@ Then the images should be displayed in columns, as screen width allows
 
 How are we implementing it?
 Refactor your CSS to use Flexbox instead of floats. You are welcome to use a combination of floats and Flexbox, as you see fit.
-Feature 4: Sort the images
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+#Feature 4: Sort the images
 Why are we implementing this feature?
 As a user, I want to be able to sort the images so that there is an order to their rendering.
 What are we going to implement?
@@ -42,7 +85,18 @@ Then the images should be sorted accordingly
 How are we implementing it?
 Add the ability for the user to sort the images by either title or by number of horns.
 Sort the images by one of the properties on page load. This should also apply to the second page of images.
-Stretch Goal: Detail view
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+#Stretch Goal: Detail view
 Why are we implementing this feature?
 As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.
 What are we going to implement?
@@ -55,7 +109,18 @@ Add a detail view which will display the image in a larger size in the center of
 The description should be shown now, as well.
 When the user clicks off of the image, return to the grid view.
 Use a transition or animation to show and hide the detail view of an image.
-Stretch Goal: Fuzzy search
+
+Number and name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+#Stretch Goal: Fuzzy search
 Why are we implementing this feature?
 As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
 What are we going to implement?
