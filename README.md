@@ -26,11 +26,12 @@ Number and name of feature: Pagination
 
 Estimate of time needed to complete: 3hours
 
-Start time: 2
+Start time: 1:30
 
-Finish time: _____
+Finish time: 2:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour
+
 #Feature 2: Templating
 Why are we implementing this feature?
 As a user, I want all of the images to be displayed in a consistent manner, so that it is easy to scan the collection of images.
@@ -43,15 +44,15 @@ How are we implementing it?
 Create the appropriate Handlebars template in your HTML with the same <h2>, <img>, and <p> elements as the jQuery template from the prior lab.
 Refactor the method that renders your images to use Handlebars instead of making a copy with jQuery.
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 2: Templating
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 1:30
 
-Finish time: _____
+Finish time: 2:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour. 
 
 #Feature 3: Styling with Flexbox
 Why are we implementing this feature?
