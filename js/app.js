@@ -10,22 +10,15 @@ function Creature(animal) {
 Creature.allCreatures = [];
 
 Creature.prototype.render = function() {
-  $("main").append('<div class="clone"></div>');
-  let creatureClone = $('div[class="clone"]');
-  let creatureHtml = $("#photo-template").html();
-  creatureClone.html(creatureHtml);
-  creatureClone.find("h2").text(this.title);
-  creatureClone
-    .find("img")
-    .attr("src", this.image_url)
-    .attr("alt", this.description);
-  creatureClone.find("p").text(this.description);
-  creatureClone.removeClass("clone");
-  creatureClone.attr("class", this.keyword).addClass('animal');
+  let template = $('#photo-template').html();
+  let templateRender = Handlebars.compile(template);
+    return templateRender(this);
+ 
 };
 
-Creature.readJson = () => {
-  $.get("../data/page-1.json", "json")
+
+Creature.readJson = (filepage) => {
+  $.get(filepage, 'json')
     .then(data => {
       data.forEach(item => {
         Creature.allCreatures.push(new Creature(item));
@@ -35,11 +28,11 @@ Creature.readJson = () => {
 };
 
 Creature.loadCreatures = () => {
-  Creature.allCreatures.forEach(item => item.render());
+  Creature.allCreatures.forEach(item => $('#photos').append(item.render()));
   Creature.makeOption();
 };
 
-$(() => Creature.readJson());
+$(() => Creature.readJson('../data/page-1.json'));
 // Below is JS for creating list options
 Creature.SelectOptions = [];
 
@@ -67,3 +60,4 @@ $('select[name="choice"]').on('change', function() {
 
   })
 
+// add event listener to nav to only populate images from selected button
