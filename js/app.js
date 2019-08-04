@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function Creature(animal) {
   this.keyword = animal.keyword;
@@ -12,8 +12,8 @@ Creature.allCreatures = [];
 Creature.prototype.render = function() {
   let template = $('#photo-template').html();
   let templateRender = Handlebars.compile(template);
-    return templateRender(this);
- 
+  return templateRender(this);
+
 };
 
 
@@ -45,31 +45,60 @@ Creature.makeOption = function() {
   });
   // Below is updating the list on site
   for (var i = 0; i < SelectOptionsClone.length; i++) {
-    $("select").append(
-      "<option value=" + SelectOptionsClone[i] + ">" + SelectOptionsClone[i] + "</option>"
+    $('select').append(
+      '<option value=' + SelectOptionsClone[i] + '>' + SelectOptionsClone[i] + '</option>'
     );
   }
 };
 
 // event listener for drop down menu
-$('select').on('change', function() { 
+$('select').on('change', function() {
   let $selection = $(this).val();
-   $('.creatureDiv').hide();
-   $('.' + $selection).show();  
-  })
+  $('.creatureDiv').hide();
+  $('.' + $selection).show();
+})
 
 // add event listener to nav to only populate images from selected button
-$('#pageOneButton').on("click", function() {
+$('#pageOneButton').on('click', function() {
   $('.creatureDiv').remove();
   $('option').remove();
   Creature.SelectOptions = [];
   Creature.allCreatures = [];
   $(() => Creature.readJson('../data/page-1.json'));
 })
-$('#pageTwoButton').on("click", function() {
+$('#pageTwoButton').on('click', function() {
   $('.creatureDiv').remove();
   $('option').remove();
   Creature.SelectOptions = [];
   Creature.allCreatures = [];
   $(() => Creature.readJson('../data/page-2.json'));
 })
+
+//radio
+$('input[type="radio"]').click(function() {
+  if ($(this).is(':checked')) {
+    $('.creatureDiv').remove();
+    $('.option').remove();
+
+    if ($(this).val() === 'horns') {
+      Creature.allCreatures.sort(function(a, b) {
+        return a.horns - b.horns;
+      });
+      Creature.loadCreatures();
+    } else if ($(this).val() === 'name') {
+      Creature.allCreatures.sort(function(a, b) {
+        var creatureA = a.title.toLowerCase();
+        var creatureB = b.title.toLowerCase();
+
+        if (creatureA < creatureB) {
+          return -1;
+        } else if (creatureA > creatureA) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      Creature.loadCreatures();
+    }
+  }
+});
