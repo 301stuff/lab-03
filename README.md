@@ -65,15 +65,15 @@ Then the images should be displayed in columns, as screen width allows
 How are we implementing it?
 Refactor your CSS to use Flexbox instead of floats. You are welcome to use a combination of floats and Flexbox, as you see fit.
 
-Number and name of feature: ________________________________
+Number and name of feature: Styling with Flexbox
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hour
 
-Start time: _____
+Start time: 8a
 
-Finish time: _____
+Finish time: 8:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30min
 
 #Feature 4: Sort the images
 Why are we implementing this feature?
@@ -87,15 +87,16 @@ How are we implementing it?
 Add the ability for the user to sort the images by either title or by number of horns.
 Sort the images by one of the properties on page load. This should also apply to the second page of images.
 
-Number and name of feature: ________________________________
+Number and name of feature: Sort Images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hour
 
-Start time: _____
+Start time: 8:30
 
-Finish time: _____
+Finish time: 9
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30min
+Received help from Anna Li on this feature
 
 #Stretch Goal: Detail view
 Why are we implementing this feature?
